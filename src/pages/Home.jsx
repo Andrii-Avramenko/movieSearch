@@ -7,7 +7,6 @@ function Home() {
   useEffect(() => {
     async function loadTrending() {
       const results = await getTrending();
-      console.log(results)
       setTrends(results.results);
     }
 

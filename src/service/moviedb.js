@@ -19,7 +19,7 @@ export const getTrending = () => {
 
 export const searchMovie = (query, page) => {
   return axios
-    .get(`${baseURL}/search/movie`, {
+    .get(`${baseURL}/search/multi`, {
       params: {
         query,
         page,
