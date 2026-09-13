@@ -4,10 +4,9 @@ const baseURL = "https://api.themoviedb.org/3";
 const movieDbAPI =
   "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI0NTE0OTkwZDQ4Njc1MGIzOGJiODMwNDgwZWJlN2RiZCIsIm5iZiI6MTc4OTMwMjg4MS4zNTgsInN1YiI6IjZhYTY5ODYxOTY1ZjVkZjY0N2E5N2YyYiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.XocQLOkd_i9_WiY221LvFtGhNmdw6iPdFfo7cOTGQxk";
 
-export const getTrending = (page) => {
+export const getTrending = () => {
   return axios
     .get(`${baseURL}/trending/all/week`, {
-      params: { page },
       headers: {
         Authorization: `bearer ${movieDbAPI}`,
       },
