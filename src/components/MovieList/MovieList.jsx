@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import MoviePreview from "../MoviePreview/MoviePreview";
 import { StyledList } from "./MovieList.styled";
 
@@ -19,3 +20,7 @@ function MovieList({ movies }) {
 }
 
 export default MovieList
+
+MovieList.propTypes = {
+  movies: PropTypes.array.isRequired,
+};

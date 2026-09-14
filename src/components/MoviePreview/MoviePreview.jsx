@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import { Card, StyledLink, Image, MovieTitle, MovieTime, MovieDesc } from "./MoviePreview.styled";
 
 const truncate = (str, max, suffix) => {
@@ -18,8 +19,8 @@ function MoviePreview({ id, title, posterPath, overview, releaseDate }) {
         />
         <div>
           <MovieTitle>{title}</MovieTitle>
-          <MovieTime>{date.toDateString()}</MovieTime>
-          <MovieDesc>{truncate(overview, 150, "...")}</MovieDesc>
+          {!!date && <MovieTime>{date.toDateString()}</MovieTime>}
+          {!!overview && <MovieDesc>{truncate(overview, 150, "...")}</MovieDesc>}
         </div>
       </StyledLink>
     </Card>
@@ -27,3 +28,11 @@ function MoviePreview({ id, title, posterPath, overview, releaseDate }) {
 }
 
 export default MoviePreview;
+
+MoviePreview.propTypes = {
+  id: PropTypes.number.isRequired,
+  title: PropTypes.string.isRequired,
+  posterPath: PropTypes.string.isRequired,
+  overview: PropTypes.string,
+  releaseDate: PropTypes.string,
+};
