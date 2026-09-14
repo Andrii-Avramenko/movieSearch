@@ -1,28 +1,28 @@
 import { useEffect, useState } from "react";
 import { getTrending } from "../service/moviedb";
+import MovieList from "../components/MovieList/MovieList";
 
 function Home() {
   const [trends, setTrends] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
+    setIsLoading(true)
     async function loadTrending() {
       const results = await getTrending();
       setTrends(results.results);
+      setIsLoading(false)
     }
 
-    loadTrending()
+    loadTrending();
   }, []);
 
+  console.log(trends)
   return (
     <main>
-      <h2>Trending today</h2>
-      <ul>
-        {trends.map((trend) => (
-          <li key={trend.id}>
-            <a href={`movieSearch/movies/${trend.id}`}>{trend.title || trend.name}</a>
-          </li>
-        ))}
-      </ul>
+      <h2 style={{margin: '0 0 20px', textAlign: 'center'}}>Trending today</h2>
+      {!!trends && !isLoading && <MovieList movies={trends} />}
+      {isLoading && <p>Loading...</p>}
     </main>
   );
 }
