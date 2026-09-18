@@ -20,7 +20,7 @@ function Home() {
   console.log(trends)
   return (
     <main>
-      <h2 style={{margin: '0 0 20px', textAlign: 'center'}}>Trending today</h2>
+      <h2 style={{margin: '80px 0 20px', textAlign: 'center'}}>Trending today</h2>
       {!!trends && !isLoading && <MovieList movies={trends} />}
       {isLoading && <p>Loading...</p>}
     </main>

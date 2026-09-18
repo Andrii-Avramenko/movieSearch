@@ -1,7 +1,11 @@
+import { Outlet } from "react-router-dom";
+
 function Movies() {
   return (
-    <h2>Movies</h2>
-  )
+    <main>
+      <Outlet />
+    </main>
+  );
 }
 
 export default Movies;

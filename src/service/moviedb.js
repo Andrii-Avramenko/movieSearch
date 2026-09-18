@@ -6,7 +6,7 @@ const movieDbAPI =
 
 export const getTrending = () => {
   return axios
-    .get(`${baseURL}/trending/all/week`, {
+    .get(`${baseURL}/trending/movie/week`, {
       headers: {
         Authorization: `bearer ${movieDbAPI}`,
       },
@@ -19,7 +19,7 @@ export const getTrending = () => {
 
 export const searchMovie = (query, page) => {
   return axios
-    .get(`${baseURL}/search/multi`, {
+    .get(`${baseURL}/search/movie`, {
       params: {
         query,
         page,
