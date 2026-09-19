@@ -21,7 +21,7 @@ export const Image = styled.img`
 export const MovieTitle = styled.h2`
     font-size: 20px;
     font-weight: 700;
-    margin: 0 0 10px;
+    margin: 10px 0;
     color: #3b3b3b;
 `
 

@@ -7,6 +7,7 @@ import { MovieDetails } from "./pages/MovieDetails/MovieDetails";
 import { MovieSearch } from "./pages/MovieSearch";
 import { Overview } from "./components/Overview/Overview";
 import { Cast } from "./components/Cast/Cast";
+import { Review } from "./components/Review/Review";
 
 function App() {
   return (
@@ -22,7 +23,7 @@ function App() {
           <Route path=":movieId" element={<MovieDetails />}>
             <Route index element={<Overview />} />
             <Route path="cast" element={<Cast />} />
-            <Route path="reviews" element={<p>reviews</p>} />
+            <Route path="reviews" element={<Review />} />
             <Route />
             <Route />
           </Route>

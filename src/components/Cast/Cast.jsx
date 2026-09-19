@@ -33,8 +33,7 @@ export const Cast = () => {
       {cast.map((actor) => (
         <Card key={actor.id}>
           <Image
-            src={`https://image.tmdb.org/t/p/w138_and_h175_face${actor.profile_path}`}
-            alt={`${actor.name}'s picture`}
+            $path={actor.profile_path}
           />
           <ActorInfo>
             <Name>{actor.name}</Name>

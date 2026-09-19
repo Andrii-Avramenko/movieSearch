@@ -62,7 +62,7 @@ export const getMovieCredits = (id) => {
 
 export const getMovieReviews = (id, page) => {
   return axios
-    .get(`${baseURL}/movie/${id}/credits`, {
+    .get(`${baseURL}/movie/${id}/reviews`, {
       params: { page },
       headers: {
         Authorization: `Bearer ${movieDbAPI}`,
