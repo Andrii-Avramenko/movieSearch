@@ -4,7 +4,7 @@ import Home from "./pages/Home";
 import Movies from "./pages/Movies";
 import { GlobalStyle } from "./components/GlobalStyle";
 import { MovieDetails } from "./pages/MovieDetails/MovieDetails";
-import { MovieSearch } from "./pages/MovieSearch";
+import { MovieSearch } from "./pages/MovieSearch/MovieSearch";
 import { Overview } from "./components/Overview/Overview";
 import { Cast } from "./components/Cast/Cast";
 import { Review } from "./components/Review/Review";
