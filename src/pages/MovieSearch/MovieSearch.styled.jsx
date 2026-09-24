@@ -12,6 +12,8 @@ export const Container = styled.div`
 export const Input = styled.input`
   width: 500px;
   margin: 0 auto;
-  padding: 10px;
+  padding: 15px;
+  border: 1px solid #000;
+  border-radius: 15px;
   box-shadow: 0px 5px 20px 0px #0000007f;
 `;
