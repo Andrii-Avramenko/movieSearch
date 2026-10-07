@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export const Card = styled.li`
-  width: 300px;
+  max-width: 300px;
   height: 600px;
   border-radius: 20px;
 `;

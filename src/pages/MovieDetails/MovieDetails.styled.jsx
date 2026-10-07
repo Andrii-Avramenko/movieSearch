@@ -1,6 +1,14 @@
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 
+export const Container = styled.div`
+  padding-top: 50px;
+
+  @media screen and (min-width: 480px) {
+    padding: 0;
+  }
+`;
+
 export const BgWrapper = styled.div`
   width: 100vw;
   background-color: black;
@@ -22,9 +30,20 @@ export const InfoWrapper = styled.div`
 
 export const Title = styled.h2`
   position: absolute;
-  top: -100px;
-  font-size: 64px;
+  bottom: 105%;
+  max-width: 60%;
+  text-align: bottom;
+  font-size: 32px;
   color: white;
+
+  @media screen and (min-width: 480px) {
+    max-width: 70%;
+    font-size: 48px;
+  }
+
+  @media screen and (min-width: 768px) {
+    font-size: 64px;
+  }
 `;
 
 export const StyledNav = styled.nav`

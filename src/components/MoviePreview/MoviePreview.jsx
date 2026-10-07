@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
 import { Card, StyledLink, Image, MovieTitle, MovieTime, MovieDesc } from "./MoviePreview.styled";
+import { useLocation } from "react-router-dom";
 
 const truncate = (str, max, suffix) => {
   if (!str) return;
@@ -9,10 +10,11 @@ const truncate = (str, max, suffix) => {
 };
 
 function MoviePreview({ id, title, posterPath, overview, releaseDate }) {
+  const location = useLocation()
   const date = new Date(releaseDate)
   return (
     <Card>
-      <StyledLink to={`/movies/${id}`}>
+      <StyledLink to={`/movies/${id}`} state={{from: location}}>
         <Image
           src={`https://image.tmdb.org/t/p/w600_and_h900_face${posterPath}`}
           alt={`${title}'s Poster`}

@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const InfoCard = styled.div`
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     gap: 20px;
     padding: 15px;
     border-radius: 15px;

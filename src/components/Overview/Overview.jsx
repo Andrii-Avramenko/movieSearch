@@ -6,7 +6,7 @@ export const Overview = () => {
   const movie = useOutletContext();
   return (
     <>
-      <Title>Descibtion</Title>
+      <Title>Describtion</Title>
       <OverviewWrapper>
         <Desc>{movie.overview}</Desc>
         <InfoCard>

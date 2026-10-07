@@ -8,6 +8,7 @@ import {
   InfoWrapper,
   StyledNav,
   StyledLink,
+  Container,
 } from "./MovieDetails.styled";
 import { MdCameraRoll, MdPeople, MdReviews } from "react-icons/md";
 
@@ -32,7 +33,7 @@ export const MovieDetails = () => {
   const { backdrop_path, name, title } = movie;
 
   return (
-    <div>
+    <Container>
       <BgWrapper>
         <BgImage
           src={`https://media.themoviedb.org/t/p/w1920_and_h800_multi_faces${backdrop_path}`}
@@ -48,6 +49,6 @@ export const MovieDetails = () => {
         </StyledNav>
         <Outlet context={movie} />
       </InfoWrapper>
-    </div>
+    </Container>
   );
 };

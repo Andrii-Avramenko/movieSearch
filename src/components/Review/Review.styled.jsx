@@ -12,19 +12,33 @@ export const ReviewsList = styled.ul`
 
 export const ReviewCard = styled.div`
   display: flex;
+  flex-direction: column;
   padding: 20px;
   min-height: 150px;
   border-radius: 30px;
   border: 2px solid #00000079;
+
+  @media screen and (min-width: 480px) {
+    flex-direction: row;
+  }
 `;
 
 export const ReviewAuthor = styled.div`
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
   gap: 10px;
-  padding-right: 10px;
-  margin-right: 10px;
-  border-right: 2px solid #00000079;
+  padding: 0 0 10px;
+  margin: 0 0 10px;
+  border-bottom: 2px solid #00000079;
+
+  @media screen and (min-width: 480px) {
+    border-bottom: none;
+    border-right: 2px solid #00000079;
+    flex-direction: column;
+    padding-right: 10px;
+    margin-right: 10px;
+  }
 `;
 
 export const AuthorImage = styled.div`
@@ -40,18 +54,18 @@ export const AuthorImage = styled.div`
 `;
 
 export const Name = styled.h3`
-    font-size: 18px;
-`
+  font-size: 18px;
+`;
 export const Username = styled.p`
-    font-size: 14px;
-    font-style: italic;
-    color: #00000079;
-`
+  font-size: 14px;
+  font-style: italic;
+  color: #00000079;
+`;
 
 export const PostDate = styled.p`
-    font-size: 14px;
-    font-style: italic;
-`
+  font-size: 14px;
+  font-style: italic;
+`;
 
 export const ReviewContent = styled.p`
   font-size: 16px;
