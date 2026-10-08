@@ -14,6 +14,8 @@ export const GlobalStyle = createGlobalStyle`
       background-color: #262626;
       color: #fff;
     }
+
+    font-family: 'Roboto', sans-serif;
   }
 
   #root {

@@ -1,8 +1,9 @@
 import { useOutletContext } from "react-router-dom";
 import { OverviewWrapper, Title, Desc } from "./Overview.styled";
 import InfoCard from "../InfoCard.styled";
+import { memo } from "react";
 
-const Overview = () => {
+const Overview = memo(() => {
   const movie = useOutletContext();
   return (
     <>
@@ -50,6 +51,6 @@ const Overview = () => {
       </OverviewWrapper>
     </>
   );
-};
+});
 
 export default Overview

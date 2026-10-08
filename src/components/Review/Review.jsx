@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { memo, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { getMovieReviews } from "../../service/moviedb";
 import {
@@ -12,7 +12,7 @@ import {
   ReviewContent,
 } from "./Review.styled";
 
-const Review = () => {
+const Review = memo(() => {
   const { movieId } = useParams();
   const [reviews, setReviews] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
@@ -49,6 +49,6 @@ const Review = () => {
       ))}
     </ReviewsList>
   );
-};
+});
 
 export default Review

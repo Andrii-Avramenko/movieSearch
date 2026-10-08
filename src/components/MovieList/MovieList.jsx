@@ -1,8 +1,9 @@
 import PropTypes from "prop-types";
 import MoviePreview from "../MoviePreview/MoviePreview";
 import { StyledList } from "./MovieList.styled";
+import { memo } from "react";
 
-function MovieList({ movies }) {
+const MovieList = memo(({ movies }) => {
   return (
     <StyledList>
       {movies.map((movie) => (
@@ -17,7 +18,7 @@ function MovieList({ movies }) {
       ))}
     </StyledList>
   );
-}
+})
 
 export default MovieList
 

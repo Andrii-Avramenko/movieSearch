@@ -1,6 +1,7 @@
 import PropTypes from "prop-types";
 import { Card, StyledLink, Image, MovieTitle, MovieTime, MovieDesc } from "./MoviePreview.styled";
 import { useLocation } from "react-router-dom";
+import { memo } from "react";
 
 const truncate = (str, max, suffix) => {
   if (!str) return;
@@ -9,7 +10,7 @@ const truncate = (str, max, suffix) => {
     : `${str.substr(0, str.substr(0, max - suffix.length).lastIndexOf(" "))}${suffix}`;
 };
 
-function MoviePreview({ id, title, posterPath, overview, releaseDate }) {
+const MoviePreview = memo(({ id, title, posterPath, overview, releaseDate }) => {
   const location = useLocation()
   const date = new Date(releaseDate)
   return (
@@ -27,7 +28,7 @@ function MoviePreview({ id, title, posterPath, overview, releaseDate }) {
       </StyledLink>
     </Card>
   );
-}
+})
 
 export default MoviePreview;
 

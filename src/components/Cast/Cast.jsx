@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { memo, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { getMovieCredits } from "../../service/moviedb";
 import {
@@ -10,7 +10,7 @@ import {
   Character,
 } from "./Cast.styled";
 
-const Cast = () => {
+const Cast = memo(() => {
   const { movieId } = useParams();
   const [cast, setCast] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
@@ -43,6 +43,6 @@ const Cast = () => {
       ))}
     </CardCollection>
   );
-};
+});
 
 export default Cast

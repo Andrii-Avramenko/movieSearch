@@ -1,9 +1,9 @@
-import { useEffect, useState } from "react";
+import { memo, useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { BackBtn, StyledLink, StyledNav } from "./HeaderNav.styled";
 import { TiArrowBackOutline } from "react-icons/ti";
 
-export const HeaderNav = () => {
+export const HeaderNav = memo(() => {
   const [backLink, setBackLink] = useState(null);
   const { state } = useLocation();
 
@@ -32,4 +32,4 @@ export const HeaderNav = () => {
       </StyledNav>
     </>
   );
-};
+});
