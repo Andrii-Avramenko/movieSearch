@@ -1,13 +1,12 @@
 import { Routes, Route } from "react-router-dom";
-import { StyledNav, StyledLink } from "./components/HeaderNav/HeaderNav.styled";
 import Home from "./pages/Home";
 import Movies from "./pages/Movies";
 import { GlobalStyle } from "./components/GlobalStyle";
-import { MovieDetails } from "./pages/MovieDetails/MovieDetails";
-import { MovieSearch } from "./pages/MovieSearch/MovieSearch";
-import { Overview } from "./components/Overview/Overview";
-import { Cast } from "./components/Cast/Cast";
-import { Review } from "./components/Review/Review";
+import MovieDetails from "./pages/MovieDetails/MovieDetails";
+import MovieSearch from "./pages/MovieSearch/MovieSearch";
+import Overview from "./components/Overview/Overview";
+import Cast from "./components/Cast/Cast";
+import Review from "./components/Review/Review";
 import { HeaderNav } from "./components/HeaderNav/HeaderNav";
 import { NotFound } from "./pages/NotFound/NotFound";
 

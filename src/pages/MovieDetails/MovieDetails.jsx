@@ -12,7 +12,7 @@ import {
 } from "./MovieDetails.styled";
 import { MdCameraRoll, MdPeople, MdReviews } from "react-icons/md";
 
-export const MovieDetails = () => {
+const MovieDetails = () => {
   const { movieId } = useParams();
   const [movie, setMovie] = useState({});
   const [isLoading, setIsLoading] = useState(false);
@@ -52,3 +52,5 @@ export const MovieDetails = () => {
     </Container>
   );
 };
+
+export default MovieDetails

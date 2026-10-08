@@ -30,7 +30,7 @@ export const InfoWrapper = styled.div`
 
 export const Title = styled.h2`
   position: absolute;
-  bottom: 105%;
+  bottom: calc(100% + 20px);
   max-width: 60%;
   text-align: bottom;
   font-size: 32px;

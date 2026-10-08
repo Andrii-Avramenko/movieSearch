@@ -10,7 +10,7 @@ import {
   Character,
 } from "./Cast.styled";
 
-export const Cast = () => {
+const Cast = () => {
   const { movieId } = useParams();
   const [cast, setCast] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
@@ -44,3 +44,5 @@ export const Cast = () => {
     </CardCollection>
   );
 };
+
+export default Cast

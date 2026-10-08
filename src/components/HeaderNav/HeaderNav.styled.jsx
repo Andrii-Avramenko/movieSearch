@@ -22,6 +22,11 @@ export const StyledNav = styled.nav`
     backdrop-filter: blur(6px);
     -webkit-backdrop-filter: blur(6px);
   }
+
+  @media (prefers-color-scheme: dark) {
+      border-bottom: 2px solid #ffffff30;
+      box-shadow: none;
+    }
 `;
 
 export const StyledLink = styled(NavLink)`

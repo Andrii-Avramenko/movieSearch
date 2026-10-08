@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import placeholder from '../../assets/image_placeholder.svg'
+import placeholder from "../../assets/image_placeholder.svg";
 
 export const CardCollection = styled.ul`
   display: flex;
@@ -7,7 +7,7 @@ export const CardCollection = styled.ul`
   gap: 50px;
   justify-content: center;
   align-items: center;
-  padding: 50px 0; 
+  padding: 50px 0;
 `;
 
 export const Card = styled.li`
@@ -15,13 +15,20 @@ export const Card = styled.li`
   flex-direction: column;
   width: 138px;
   height: 260px;
+  border: 2px solid transparent;
   border-radius: 15px;
   box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.5);
+
+  @media (prefers-color-scheme: dark) {
+    border-color: #ffffff30;
+    box-shadow: none;
+  }
 `;
 
 export const Image = styled.div`
   border-radius: 15px;
-  width: 138px;
+  max-width: 138px;
+  width: 100%;
   height: 175px;
   background-color: #dbdbdb;
   background-size: ${({ $path }) => ($path ? `cover` : `100px`)};

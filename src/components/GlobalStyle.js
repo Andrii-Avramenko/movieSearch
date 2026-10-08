@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components'
+import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
   * {
@@ -7,7 +7,16 @@ export const GlobalStyle = createGlobalStyle`
     padding: 0;
   }
 
+  body {
+    background-color: #fff;
+
+    @media (prefers-color-scheme: dark) {
+      background-color: #262626;
+      color: #fff;
+    }
+  }
+
   #root {
     position: relative;
   }
-`
+`;

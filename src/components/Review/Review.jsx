@@ -12,7 +12,7 @@ import {
   ReviewContent,
 } from "./Review.styled";
 
-export const Review = () => {
+const Review = () => {
   const { movieId } = useParams();
   const [reviews, setReviews] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
@@ -50,3 +50,5 @@ export const Review = () => {
     </ReviewsList>
   );
 };
+
+export default Review

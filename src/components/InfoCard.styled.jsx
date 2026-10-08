@@ -1,17 +1,23 @@
 import styled from "styled-components";
 
-export const InfoCard = styled.div`
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 20px;
-    padding: 15px;
-    border-radius: 15px;
-    background-color: #dedede;
+const InfoCard = styled.div`
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 15px;
+  border-radius: 15px;
+  background-color: #dedede;
 
-    div {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-    }
-`
+  @media (prefers-color-scheme: dark) {
+    background-color: #454545;
+  }
+
+  div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+`;
+
+export default InfoCard

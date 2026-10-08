@@ -1,14 +1,14 @@
 import { useEffect, useState } from "react";
-import { replace, useSearchParams } from "react-router-dom";
+import { useSearchParams } from "react-router-dom";
 import { searchMovie } from "../../service/moviedb";
 import MovieList from "../../components/MovieList/MovieList";
 import { Container, Input } from "./MovieSearch.styled";
 
-export const MovieSearch = () => {
+const MovieSearch = () => {
   const [results, setResults] = useState([]);
   const [searchParams, setSearchParams] = useSearchParams("");
   const query = searchParams.get("query");
-  const [input, setInput] = useState(query);
+  const [input, setInput] = useState(query ?? '');
   const [isLoading, setIsLoading] = useState(false);
 
   const handleChange = (e) => {
@@ -49,3 +49,5 @@ export const MovieSearch = () => {
     </Container>
   );
 };
+
+export default MovieSearch
